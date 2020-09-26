@@ -20,7 +20,7 @@ func BenchmarkRegex(b *testing.B) {
 	assert.Greater(b, catDocs.Len(), 1)
 }
 
-func BenchmarkFullText(b *testing.B) {
+func BenchmarkInvertIndex(b *testing.B) {
 	catDocs, err := fullTextSearch.Search(docs, "cat")
 	assert.NoError(b, err)
 	assert.Greater(b, catDocs.Len(), 1)
